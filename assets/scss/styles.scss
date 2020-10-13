@@ -4,7 +4,10 @@ html, body {
 $text-color-grey: rgb(145, 143, 143);
 $color-grey: rgba(247, 242, 242, 0.8);
 $text-color-black: rgba(0, 0, 0, 0.932);
+
 $text-color-white: white;
+$color-black: rgb(0, 2, 17);
+$color-black-blur: rgb(0, 1, 41);
 $color-white: white;
 $margin-bot-short: 10px;
 @mixin margin-bot($value) {
@@ -21,8 +24,48 @@ $border-radius-item: 7px;
             overflow: hidden;
             background-color: $bgColor;
 }
-body {
+@keyframes leftToRight {
+    0% {
+   
+    }
+    100% {
+        transform: translate(30px, -50%);
+    }
+}
+@keyframes rightToLeft {
+    0% {
+        transform: translate(30px, -50%);
+    }
+    100% {
+        transform: translate(3px, -50%);
+    }
+}
+
+.wrapper,
+.mode {
     background: $color-white;
+}
+.wrapper.dark-mode {
+    .mode {
+        background-color: $color-black;
+        h2,
+        h3,
+        .followers__number,
+        .followers__text,
+        .overview__number,
+        .overview__percent
+        {
+            color: $color-white;
+    
+        }
+        .followers__item,
+        .overview__box
+        {
+            background-color: $color-black-blur;
+        }
+    }
+  
+    
 }
 .margin-bot-sm {
     margin-bottom: 15px;
@@ -78,11 +121,13 @@ body {
                     transform: translateY(-50%);
                     background-color: white;
                     box-shadow: 1px .6px 2px rgba(0,0,0, $alpha: 0.4);
+                    animation: rightToLeft .5s forwards;
 
                 }
                 &:checked::before {
-                    transform: translate(30px, -50%);
+                    animation: leftToRight 0.5s forwards;
                 }
+               
                
             }
         }

@@ -1,8 +1,33 @@
 html, body {
   font-family: sans-serif; }
 
-body {
+@keyframes leftToRight {
+  0% { }
+  100% {
+    transform: translate(30px, -50%); } }
+
+@keyframes rightToLeft {
+  0% {
+    transform: translate(30px, -50%); }
+  100% {
+    transform: translate(3px, -50%); } }
+
+.wrapper,
+.mode {
   background: white; }
+
+.wrapper.dark-mode .mode {
+  background-color: #000211; }
+  .wrapper.dark-mode .mode h2,
+  .wrapper.dark-mode .mode h3,
+  .wrapper.dark-mode .mode .followers__number,
+  .wrapper.dark-mode .mode .followers__text,
+  .wrapper.dark-mode .mode .overview__number,
+  .wrapper.dark-mode .mode .overview__percent {
+    color: white; }
+  .wrapper.dark-mode .mode .followers__item,
+  .wrapper.dark-mode .mode .overview__box {
+    background-color: #000129; }
 
 .margin-bot-sm {
   margin-bottom: 15px; }
@@ -50,9 +75,10 @@ body {
           left: 4px;
           transform: translateY(-50%);
           background-color: white;
-          box-shadow: 1px 0.6px 2px rgba(0, 0, 0, 0.4); }
+          box-shadow: 1px 0.6px 2px rgba(0, 0, 0, 0.4);
+          animation: rightToLeft .5s forwards; }
         .menu-header__dark-mode .btn--switch:checked::before {
-          transform: translate(30px, -50%); }
+          animation: leftToRight 0.5s forwards; }
 
 .followers {
   display: flex; }
