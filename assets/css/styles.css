@@ -1,0 +1,185 @@
+html, body {
+  font-family: sans-serif; }
+
+body {
+  background: white; }
+
+.margin-bot-sm {
+  margin-bottom: 15px; }
+
+.menu-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px; }
+  .menu-header__heading {
+    font-weight: 700;
+    font-size: 1.6rem; }
+  .menu-header__info-total {
+    color: #918f8f; }
+  .menu-header__dark-mode {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .menu-header__dark-mode .dark-mode-name {
+      color: #918f8f;
+      font-weight: 600;
+      margin-right: 10px; }
+    .menu-header__dark-mode .btn {
+      cursor: pointer;
+      width: 60px;
+      height: 30px;
+      display: block;
+      transition: all .8s;
+      outline: none;
+      border: none;
+      box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.4); }
+      .menu-header__dark-mode .btn--switch {
+        position: relative;
+        border-radius: 20px;
+        -webkit-appearance: none;
+        background: linear-gradient(to right, #0df2c1, #27e741); }
+        .menu-header__dark-mode .btn--switch::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          top: 50%;
+          left: 4px;
+          transform: translateY(-50%);
+          background-color: white;
+          box-shadow: 1px 0.6px 2px rgba(0, 0, 0, 0.4); }
+        .menu-header__dark-mode .btn--switch:checked::before {
+          transform: translate(30px, -50%); }
+
+.followers {
+  display: flex; }
+  .followers__item {
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(247, 242, 242, 0.8);
+    display: flex;
+    padding: 40px 0px 20px 0px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    cursor: pointer; }
+    .followers__item:hover {
+      background-color: #dfdfdf; }
+    .followers__item .hr-top-fb {
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      top: 0;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      overflow: hidden;
+      background-color: #00a2ff; }
+    .followers__item .hr-top-twitter {
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      top: 0;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      overflow: hidden;
+      background-color: #00f7ff; }
+    .followers__item .hr-top-insta {
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      top: 0;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      overflow: hidden;
+      background-color: #ff0040; }
+    .followers__item .hr-top-youtube {
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      top: 0;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      overflow: hidden;
+      background-color: red; }
+  .followers__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; }
+    .followers__info svg {
+      margin-right: 5px; }
+  .followers__name {
+    font-size: 1rem;
+    color: #918f8f; }
+  .followers__number {
+    margin-bottom: 5px;
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.932); }
+  .followers__text {
+    text-transform: uppercase;
+    color: #918f8f;
+    letter-spacing: 5px;
+    font-size: .8rem;
+    font-weight: 500;
+    margin-bottom: 20px; }
+  .followers__date {
+    display: flex;
+    align-items: center;
+    color: #11a8a0; }
+    .followers__date svg {
+      margin-right: 5px; }
+
+.overview__heading {
+  margin: 30px 0;
+  font-size: 1.5rem;
+  color: #918f8f;
+  font-weight: 600; }
+
+.overview__box {
+  background-color: rgba(247, 242, 242, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  border-radius: 7px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer; }
+  .overview__box:hover {
+    background-color: #dfdede; }
+
+.overview__info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px; }
+
+.overview__text {
+  color: #918f8f;
+  font-weight: 500; }
+
+.overview__satistic {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.overview__number {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.932);
+  font-weight: 600; }
+
+.overview__percent {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center; }
+  .overview__percent--up {
+    color: #03c003; }
+  .overview__percent--down {
+    color: #c00303; }
+  .overview__percent svg {
+    margin-right: 3px; }
