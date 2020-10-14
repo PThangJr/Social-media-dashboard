@@ -12,22 +12,33 @@ html, body {
   100% {
     transform: translate(3px, -50%); } }
 
-.wrapper,
-.mode {
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+
+.wrapper {
   background: white; }
 
-.wrapper.dark-mode .mode {
+.wrapper.dark-mode {
   background-color: #000211; }
-  .wrapper.dark-mode .mode h2,
-  .wrapper.dark-mode .mode h3,
-  .wrapper.dark-mode .mode .followers__number,
-  .wrapper.dark-mode .mode .followers__text,
-  .wrapper.dark-mode .mode .overview__number,
-  .wrapper.dark-mode .mode .overview__percent {
+  .wrapper.dark-mode h2,
+  .wrapper.dark-mode h3,
+  .wrapper.dark-mode .followers__number,
+  .wrapper.dark-mode .followers__text,
+  .wrapper.dark-mode .overview__number,
+  .wrapper.dark-mode .overview__percent {
     color: white; }
-  .wrapper.dark-mode .mode .followers__item,
-  .wrapper.dark-mode .mode .overview__box {
+  .wrapper.dark-mode .followers__item,
+  .wrapper.dark-mode .overview__box {
     background-color: #000129; }
+    .wrapper.dark-mode .followers__item:hover,
+    .wrapper.dark-mode .overview__box:hover {
+      background-color: #080077; }
+  .wrapper.dark-mode .attribution {
+    color: #918f8f; }
+    .wrapper.dark-mode .attribution a {
+      color: white; }
 
 .margin-bot-sm {
   margin-bottom: 15px; }
@@ -56,7 +67,7 @@ html, body {
       width: 60px;
       height: 30px;
       display: block;
-      transition: all .8s;
+      transition: transform .8s;
       outline: none;
       border: none;
       box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.4); }
@@ -92,9 +103,11 @@ html, body {
     padding: 40px 0px 20px 0px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
     border-radius: 7px;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: transform .7s; }
     .followers__item:hover {
-      background-color: #dfdfdf; }
+      background-color: #dfdfdf;
+      transform: translateY(-10px); }
     .followers__item .hr-top-fb {
       position: absolute;
       width: 100%;
@@ -154,8 +167,11 @@ html, body {
     margin-bottom: 20px; }
   .followers__date {
     display: flex;
-    align-items: center;
-    color: #11a8a0; }
+    align-items: center; }
+    .followers__date--up {
+      color: #11a8a0; }
+    .followers__date--down {
+      color: #a81111; }
     .followers__date svg {
       margin-right: 5px; }
 
@@ -173,9 +189,11 @@ html, body {
   padding: 40px 20px;
   border-radius: 7px;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer; }
+  cursor: pointer;
+  transition: transform .7s; }
   .overview__box:hover {
-    background-color: #dfdede; }
+    background-color: #dededf;
+    transform: translateY(-10px); }
 
 .overview__info {
   width: 100%;
